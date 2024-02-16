@@ -11,6 +11,7 @@ pipeline {
                         withEnv(["PATH+MAVEN=${mvnHome}/bin"]) {
                             // Now you can use 'mvn' as a command
                             sh 'mvn --version'
+                            sh 'mvn clean package'
                         }
                     }
                 }
